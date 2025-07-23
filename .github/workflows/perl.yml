@@ -36,7 +36,7 @@ jobs:
         env:
           AUTOMATED_TESTING: 1
         run: |
-          cpanm -iqn ExtUtils::MakeMaker Test::Most Test::Harness
+          cpanm -iqn ExtUtils::MakeMaker Test::Most Test::Harness TAP::Harness::Env
           cpanm -iqn --skip-satisfied --installdeps --notest .
 
       - name: Run tests
