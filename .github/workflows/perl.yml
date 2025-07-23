@@ -1,0 +1,25 @@
+name: Perl CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Perl
+      uses: shogo82148/actions-setup-perl@v1
+      with:
+        perl-version: '5.32'  # or your preferred version
+
+    - name: Install dependencies
+      run: cpanm --notest --quiet --installdeps .
+
+    - name: Run tests
+      run: prove -lv t/
