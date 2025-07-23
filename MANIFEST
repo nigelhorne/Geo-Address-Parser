@@ -7,6 +7,7 @@ lib/Geo/Address/Parser/Rules/US.pm
 LICENSE
 Makefile.PL
 MANIFEST			This list of files
+MANIFEST.SKIP
 README.md
 t/au.t
 t/basic.t
@@ -14,5 +15,6 @@ t/ca.t
 t/eof.t
 t/eol.t
 t/nz.t
+t/pod.t
 t/uk.t
 t/us.t
