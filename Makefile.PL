@@ -25,7 +25,8 @@ WriteMakefile(
 		'Carp' => 0,
 		'Exporter' => 0,
 		'Module::Runtime' => 0,
-		'Params::Get' => 0
+		'Params::Get' => 0,
+		'Text::Capitalize' => 0,
 	}, TEST_REQUIRES => {
 		'Test::DescribeMe' => 0,
 		'Test::Most' => 0,

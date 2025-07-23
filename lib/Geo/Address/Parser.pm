@@ -2,9 +2,11 @@ package Geo::Address::Parser;
 
 use strict;
 use warnings;
+
 use Carp;
 use Module::Runtime qw(use_module);
 use Params::Get;
+use Text::Capitalize 'capitalize_title';
 
 =head1 NAME
 
@@ -102,11 +104,14 @@ sub parse
 	$text =~ s/\s+/ /g;
 	$text =~ s/^\s//g;
 	$text =~ s/\s$//g;
+	$text =~ s/\s,/,/g;
 
 	my $result = $parser->parse_address($text);
 
 	# Add country field to result if not already present
 	$result->{country} //= $self->{country} if $result;
+
+	$result->{'name'} = capitalize_title($result->{'name'}) if($result->{'name'});
 
 	return $result;
 }
