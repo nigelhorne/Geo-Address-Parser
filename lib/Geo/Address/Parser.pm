@@ -4,6 +4,7 @@ use strict;
 use warnings;
 use Carp;
 use Module::Runtime qw(use_module);
+use Params::Get;
 
 =head1 NAME
 
@@ -67,36 +68,41 @@ my %COUNTRY_MODULE = (
 );
 
 sub new {
-    my ($class, %args) = @_;
+	my $class = shift;
 
-    croak "Missing required 'country' parameter" unless $args{country};
+	my $params = Params::Get::get_params('country', \@_);
 
-    my $country = uc $args{country};
-    my $module  = $COUNTRY_MODULE{$country}
-      or croak "Unsupported country: $country";
+	croak "Missing required 'country' parameter" unless $params->{country};
 
-    # Load the appropriate parser module dynamically
-    use_module($module);
+	my $country = uc $params->{'country'};
+	my $module = $COUNTRY_MODULE{$country} or croak "Unsupported country: $country";
 
-    return bless {
-        country => $country,
-        module  => $module,
-    }, $class;
+	# Load the appropriate parser module dynamically
+	use_module($module);
+
+	return bless {
+		country => $country,
+		module => $module,
+	}, $class;
 }
 
 sub parse {
-    my ($self, $text) = @_;
+	my $self = shift;
 
-    croak "No input text provided" unless defined $text;
+	my $params = Params::Get::get_params('text', \@_);
 
-    my $parser = $self->{module};
+	my $text = $params->{'text'};
 
-    my $result = $parser->parse_address($text);
+	croak 'No input text provided' unless defined $text;
 
-    # Add country field to result if not already present
-    $result->{country} //= $self->{country} if $result;
+	my $parser = $self->{module};
 
-    return $result;
+	my $result = $parser->parse_address($text);
+
+	# Add country field to result if not already present
+	$result->{country} //= $self->{country} if $result;
+
+	return $result;
 }
 
 =head1 LICENCE AND COPYRIGHT
