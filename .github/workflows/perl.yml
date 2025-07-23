@@ -1,25 +1,38 @@
-name: Perl CI
+---
+# See https://github.com/actions/virtual-environments
+# https://github.com/marketplace/actions/setup-perl-environment
 
+name: Test Code
 on:
   push:
-    branches: [ main ]
+    branches:
+      - '*'
+    tags-ignore:
+      - '*'
   pull_request:
-    branches: [ main ]
+  schedule:
+    - cron: '12 24 2 * *'
+permissions:
+  contents: read
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Setup Perl
-      uses: shogo82148/actions-setup-perl@v1
-      with:
-        perl-version: '5.32'  # or your preferred version
+      - name: Setup Perl
+        uses: shogo82148/actions-setup-perl@v1
+        with:
+          perl-version: '5.32'  # or your preferred version
 
-    - name: Install dependencies
-      run: cpanm --notest --quiet --installdeps .
+      - name: Install dependencies
+        run: cpanm --notest --quiet --installdeps .
 
-    - name: Run tests
-      run: prove -lv t/
+      - name: Run tests
+        run: prove -lv t/
+        env:
+          AUTOMATED_TESTING: 1
+          NO_NETWORK_TESTING: 1
+          NONINTERACTIVE_TESTING: 1
