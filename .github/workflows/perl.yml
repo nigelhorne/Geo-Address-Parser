@@ -25,7 +25,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Perl
         uses: shogo82148/actions-setup-perl@v1
@@ -36,12 +36,19 @@ jobs:
         env:
           AUTOMATED_TESTING: 1
         run: |
-          cpanm -iqn ExtUtils::MakeMaker Test::Most Test::Harness TAP::Harness::Env
+          cpanm -iqn ExtUtils::MakeMaker Test::Most
           cpanm -iqn --skip-satisfied --installdeps --notest .
-
+      - name: Make Module
+        env:
+          AUTOMATED_TESTING: 1
+          NO_NETWORK_TESTING: 1
+          NONINTERACTIVE_TESTING: 1
+        run: |
+          # find . -name build.log | xargs cat
+          perl Makefile.PL
+          make
       - name: Run tests
-        shell: bash
-        run: prove -lv t/
+        run: prove -l -b t
         env:
           AUTOMATED_TESTING: 1
           NO_NETWORK_TESTING: 1
