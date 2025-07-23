@@ -86,7 +86,8 @@ sub new {
 	}, $class;
 }
 
-sub parse {
+sub parse
+{
 	my $self = shift;
 
 	my $params = Params::Get::get_params('text', \@_);
@@ -96,6 +97,11 @@ sub parse {
 	croak 'No input text provided' unless defined $text;
 
 	my $parser = $self->{module};
+
+	# Strip extra whitespace
+	$text =~ s/\s+/ /g;
+	$text =~ s/^\s//g;
+	$text =~ s/\s$//g;
 
 	my $result = $parser->parse_address($text);
 
