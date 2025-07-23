@@ -12,7 +12,7 @@ my $state_re = qr/\b(ACT|NSW|NT|QLD|SA|TAS|VIC|WA)\b/i;
 my $postcode_re = qr/\b(\d{4})\b/;
 
 sub parse_address {
-    my ($text) = @_;
+    my ($class, $text) = @_;
     return unless defined $text;
 
     my @parts = map { s/^\s+|\s+$//gr } split /,/, $text;

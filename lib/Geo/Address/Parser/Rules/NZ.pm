@@ -9,17 +9,16 @@ our @EXPORT_OK = qw(parse_address);
 my $postcode_re = qr/\b(\d{4})\b/;
 
 sub parse_address {
-    my ($text) = @_;
+    my ($class, $text) = @_;
     return unless defined $text;
 
     my @parts = map { s/^\s+|\s+$//gr } split /,/, $text;
 
     my ($name, $street, $suburb, $city, $postcode);
 
-    # Try to detect postcode at end
-    if ($parts[-1] =~ /$postcode_re/) {
-        $postcode = $1;
-        pop @parts;
+    if ($parts[-1] =~ /(.+?)\s+($postcode_re)$/) {
+        $postcode = $2;
+        $parts[-1] = $1;  # keep city without postcode
     }
 
     $city   = pop @parts if @parts;
@@ -35,6 +34,7 @@ sub parse_address {
         postcode => $postcode,
     };
 }
+
 
 1;
 

@@ -9,7 +9,7 @@ our @EXPORT_OK = qw(parse_address);
 my $postcode_re = qr/\b([A-Z]{1,2}\d{1,2}[A-Z]?)\s*(\d[A-Z]{2})\b/i;
 
 sub parse_address {
-    my ($text) = @_;
+    my ($class, $text) = @_;
     return unless defined $text;
 
     my @parts = map { s/^\s+|\s+$//gr } split /,/, $text;

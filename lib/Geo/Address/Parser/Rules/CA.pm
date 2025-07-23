@@ -12,7 +12,7 @@ my $postal_re = qr/\b([A-Z]\d[A-Z])\s*(\d[A-Z]\d)\b/i;
 my $province_re = qr/\b(AB|BC|MB|NB|NL|NS|NT|NU|ON|PE|QC|SK|YT)\b/i;
 
 sub parse_address {
-    my ($text) = @_;
+    my ($class, $text) = @_;
     return unless defined $text;
 
     my @parts = map { s/^\s+|\s+$//gr } split /,/, $text;

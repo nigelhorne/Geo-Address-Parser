@@ -5,57 +5,17 @@ use warnings;
 use Carp;
 use Module::Runtime qw(use_module);
 
-our $VERSION = '0.01';
-
-# Supported countries and their corresponding rule modules
-my %COUNTRY_MODULE = (
-    US => 'Geo::Address::Parser::Rules::US',
-    UK => 'Geo::Address::Parser::Rules::UK',
-    CA => 'Geo::Address::Parser::Rules::CA',
-    AU => 'Geo::Address::Parser::Rules::AU',
-    NZ => 'Geo::Address::Parser::Rules::NZ',
-);
-
-sub new {
-    my ($class, %args) = @_;
-
-    croak "Missing required 'country' parameter" unless $args{country};
-
-    my $country = uc $args{country};
-    my $module  = $COUNTRY_MODULE{$country}
-      or croak "Unsupported country: $country";
-
-    # Load the appropriate parser module dynamically
-    use_module($module);
-
-    return bless {
-        country => $country,
-        module  => $module,
-    }, $class;
-}
-
-sub parse {
-    my ($self, $text) = @_;
-
-    croak "No input text provided" unless defined $text;
-
-    my $parser = $self->{module};
-
-    my $result = $parser->parse_address($text);
-
-    # Add country field to result if not already present
-    $result->{country} //= $self->{country} if $result;
-
-    return $result;
-}
-
-1;
-
-__END__
-
 =head1 NAME
 
 Geo::Address::Parser - Lightweight country-aware address parser from flat text
+
+=head1 VERSION
+
+Version 0.01
+
+=cut
+
+our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
@@ -95,13 +55,68 @@ Parses a flat string and returns a hashref with the following fields:
 
 =back
 
-=head1 AUTHOR
+=cut
 
-Your Name
+# Supported countries and their corresponding rule modules
+my %COUNTRY_MODULE = (
+	US => 'Geo::Address::Parser::Rules::US',
+	UK => 'Geo::Address::Parser::Rules::UK',
+	CA => 'Geo::Address::Parser::Rules::CA',
+	AU => 'Geo::Address::Parser::Rules::AU',
+	NZ => 'Geo::Address::Parser::Rules::NZ',
+);
 
-=head1 LICENSE
+sub new {
+    my ($class, %args) = @_;
 
-This library is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+    croak "Missing required 'country' parameter" unless $args{country};
+
+    my $country = uc $args{country};
+    my $module  = $COUNTRY_MODULE{$country}
+      or croak "Unsupported country: $country";
+
+    # Load the appropriate parser module dynamically
+    use_module($module);
+
+    return bless {
+        country => $country,
+        module  => $module,
+    }, $class;
+}
+
+sub parse {
+    my ($self, $text) = @_;
+
+    croak "No input text provided" unless defined $text;
+
+    my $parser = $self->{module};
+
+    my $result = $parser->parse_address($text);
+
+    # Add country field to result if not already present
+    $result->{country} //= $self->{country} if $result;
+
+    return $result;
+}
+
+=head1 LICENCE AND COPYRIGHT
+
+Copyright 2025 Nigel Horne.
+
+Usage is subject to licence terms.
+
+The licence terms of this software are as follows:
+
+=over 4
+
+=item * Personal single user, single computer use: GPL2
+
+=item * All other users (including Commercial, Charity, Educational, Government)
+  must apply in writing for a licence for use from Nigel Horne at the
+  above e-mail.
+
+=back
 
 =cut
+
+1;

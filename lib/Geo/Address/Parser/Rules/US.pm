@@ -6,7 +6,7 @@ use Exporter 'import';
 our @EXPORT_OK = qw(parse_address);
 
 sub parse_address {
-    my ($text) = @_;
+    my ($class, $text) = @_;
     return unless defined $text;
 
     # Split by commas and trim whitespace
