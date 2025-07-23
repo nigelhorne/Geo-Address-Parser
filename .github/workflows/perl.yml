@@ -11,7 +11,7 @@ on:
       - '*'
   pull_request:
   schedule:
-    - cron: '12 24 2 * *'
+    - cron: '12 23 24 * *'
 permissions:
   contents: read
 
