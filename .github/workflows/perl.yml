@@ -43,3 +43,8 @@ jobs:
           AUTOMATED_TESTING: 1
           NO_NETWORK_TESTING: 1
           NONINTERACTIVE_TESTING: 1
+
+      - name: Show cpanm build log on failure (Windows)
+        if: runner.os == 'Windows' && failure()
+        shell: pwsh
+        run: Get-Content "$env:USERPROFILE\.cpanm\work\*\build.log" -Tail 100
