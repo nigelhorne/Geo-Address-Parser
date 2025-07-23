@@ -4,6 +4,7 @@ Revision history for Geo-Address-Parser
 	Use Params::Get
 	Strip extra whitespace
 	Normalize the name field
+	Added a CLI via bin/geo-parse
 
 0.01	Wed Jul 23 11:59:28 EDT 2025
         First draft

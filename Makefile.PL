@@ -21,13 +21,16 @@ WriteMakefile(
 		: ()),
 	CONFIGURE_REQUIRES => {
 		'ExtUtils::MakeMaker' => 6.64,	# Minimum version for TEST_REQUIRES
-	}, PREREQ_PM => {
+	}, EXE_FILES => ['bin/geo-parse'],
+	PREREQ_PM => {
 		'Carp' => 0,
 		'Exporter' => 0,
 		'Module::Runtime' => 0,
 		'Params::Get' => 0,
 		'Text::Capitalize' => 0,
 	}, TEST_REQUIRES => {
+		'IPC::Open3' => 0,
+		'Symbol' => 0,
 		'Test::DescribeMe' => 0,
 		'Test::Most' => 0,
 		'Test::Needs' => 0,
