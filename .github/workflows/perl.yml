@@ -32,9 +32,12 @@ jobs:
         with:
           perl-version: ${{ matrix.perl-version }}
 
-      - name: Install dependencies
-        shell: bash
-        run: cpanm --notest --quiet --installdeps .
+      - name: Install Dependencies
+        env:
+          AUTOMATED_TESTING: 1
+        run: |
+          cpanm -iqn ExtUtils::MakeMaker Test::Most
+          cpanm -iqn --skip-satisfied --installdeps --notest .
 
       - name: Run tests
         shell: bash
