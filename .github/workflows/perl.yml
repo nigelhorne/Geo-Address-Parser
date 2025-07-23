@@ -17,20 +17,27 @@ permissions:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        perl-version: ['5.32']  # add more versions if needed
+
+    runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
       - name: Setup Perl
         uses: shogo82148/actions-setup-perl@v1
         with:
-          perl-version: '5.32'  # or your preferred version
+          perl-version: ${{ matrix.perl-version }}
 
       - name: Install dependencies
+        shell: bash
         run: cpanm --notest --quiet --installdeps .
 
       - name: Run tests
+        shell: bash
         run: prove -lv t/
         env:
           AUTOMATED_TESTING: 1
