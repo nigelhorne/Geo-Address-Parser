@@ -30,7 +30,6 @@ WriteMakefile(
 		'Text::Capitalize' => 0,
 	}, TEST_REQUIRES => {
 		'Getopt::Long' => 0,
-		'Geo::Address::Parser' => 0,
 		'IPC::Open3' => 0,
 		'JSON::MaybeXS' => 0,
 		'Pod::Usage' => 0,
@@ -58,5 +57,5 @@ WriteMakefile(
 			}
 		},
 	},
-	MIN_PERL_VERSION => '5.008'
+	MIN_PERL_VERSION => '5.14.0'
 );

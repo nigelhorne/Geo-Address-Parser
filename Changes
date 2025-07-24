@@ -5,6 +5,7 @@ Revision history for Geo-Address-Parser
 	Strip extra whitespace
 	Normalize the name field
 	Added a CLI via bin/geo-parse
+	Bump the minimum version of Perl
 
 0.01	Wed Jul 23 11:59:28 EDT 2025
         First draft

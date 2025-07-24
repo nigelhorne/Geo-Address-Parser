@@ -1,5 +1,6 @@
 package Geo::Address::Parser;
 
+use 5.014;
 use strict;
 use warnings;
 
