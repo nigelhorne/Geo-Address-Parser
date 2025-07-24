@@ -29,7 +29,11 @@ WriteMakefile(
 		'Params::Get' => 0,
 		'Text::Capitalize' => 0,
 	}, TEST_REQUIRES => {
+		'Getopt::Long' => 0,
+		'Geo::Address::Parser' => 0,
 		'IPC::Open3' => 0,
+		'JSON::MaybeXS' => 0,
+		'Pod::Usage' => 0,
 		'Symbol' => 0,
 		'Test::DescribeMe' => 0,
 		'Test::Most' => 0,
