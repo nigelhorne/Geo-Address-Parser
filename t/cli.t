@@ -7,7 +7,8 @@ use Test::Most;
 
 my $script = -e 'bin/geo-parse' ? 'bin/geo-parse' : 'blib/bin/geo-parse';
 
-ok(-x $script, "$script is executable");
+# I guess everything is executable on Windows
+ok(-x $script, "$script is executable") if($^O ne 'MSWin32');
 
 my $address = 'Auckland Museum, 1 Museum Circuit, Parnell, Auckland 1010';
 
@@ -21,11 +22,10 @@ waitpid($pid, 0);
 diag("STDOUT:\n$out") if $ENV{TEST_VERBOSE};
 diag("STDERR:\n$err") if $err;
 
-like($out, qr/"city"\s*:\s*"Auckland"/,  'Output includes city');
-like($out, qr/"postcode"\s*:\s*"1010"/,  'Output includes postcode');
+like($out, qr/"city"\s*:\s*"Auckland"/, 'Output includes city');
+like($out, qr/"postcode"\s*:\s*"1010"/, 'Output includes postcode');
 like($out, qr/"street"\s*:\s*"1 Museum Circuit"/, 'Output includes street');
 like($out, qr/"suburb"\s*:\s*"Parnell"/, 'Output includes suburb');
 like($out, qr/"name"\s*:\s*"Auckland Museum"/, 'Output includes name');
 
-done_testing;
-
+done_testing();
