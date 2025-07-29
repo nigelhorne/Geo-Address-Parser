@@ -7,6 +7,7 @@ use warnings;
 use Carp;
 use Module::Runtime qw(use_module);
 use Params::Get 0.11;
+use Return::Set;
 use Text::Capitalize 'capitalize_title';
 
 =encoding utf-8
@@ -152,7 +153,8 @@ sub parse
 
 	$result->{'name'} = capitalize_title($result->{'name'}) if($result->{'name'});
 
-	return $result;
+	# Returns a hashref with at least two items: name and country
+	return Return::Set::set_return($result, { 'type' => 'hashref', 'min' => 2 });
 }
 
 =head1 LICENCE AND COPYRIGHT

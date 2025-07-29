@@ -27,6 +27,7 @@ WriteMakefile(
 		'Exporter' => 0,
 		'Module::Runtime' => 0,
 		'Params::Get' => 0.11,
+		'Return::Set' => 0,
 		'Text::Capitalize' => 0,
 	}, TEST_REQUIRES => {
 		'Getopt::Long' => 0,
