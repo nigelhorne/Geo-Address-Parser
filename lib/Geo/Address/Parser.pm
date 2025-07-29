@@ -6,7 +6,7 @@ use warnings;
 
 use Carp;
 use Module::Runtime qw(use_module);
-use Params::Get;
+use Params::Get 0.11;
 use Text::Capitalize 'capitalize_title';
 
 =encoding utf-8
