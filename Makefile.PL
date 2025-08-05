@@ -54,9 +54,8 @@ WriteMakefile(
 				# license => 'http://dev.perl.org/licenses/',
 			}, bugtracker => {
 				mailto => 'bug-Geo-Address-Parser@rt.cpan.org',
-				url => 'https://github.com/nigelhorne/Geo-Address-Parser/issues',
-				# web => 'https://rt.cpan.org/Public/Dist/Display.html?Name=Geo-Address-Parser',
-				web => 'https://github.com/nigelhorne/Geo-Address-Parser/issues'
+				url => 'https://rt.cpan.org/Public/Dist/Display.html?Name=Geo-Address-Parser',
+				web => 'https://rt.cpan.org/Public/Dist/Display.html?Name=Geo-Address-Parser',
 			}
 		},
 	},
