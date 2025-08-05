@@ -1,7 +1,7 @@
 Revision history for Geo-Address-Parser
 
 0.04
-	Use Return::Set
+	Use Return::Set, Test::Returns and Object::Configure
 
 0.03	Mon Jul 28 20:45:27 EDT 2025
 	Bump minimum version of Params::Get

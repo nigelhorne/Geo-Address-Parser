@@ -6,7 +6,8 @@ use warnings;
 
 use Carp;
 use Module::Runtime qw(use_module);
-use Params::Get 0.11;
+use Object::Configure;
+use Params::Get 0.13;
 use Return::Set;
 use Text::Capitalize 'capitalize_title';
 
@@ -49,6 +50,8 @@ This module extracts address components from flat text input. It supports
 lightweight parsing for the US, UK, Canada, Australia, and New Zealand, using
 country-specific regular expressions.
 
+The object can be configured using the methods described in L<Object::Configure>.
+
 =head2 new(country => $code)
 
 Creates a new parser for a specific country (US, UK, CA, AU, NZ).
@@ -76,15 +79,18 @@ sub new {
 
 	croak "Missing required 'country' parameter" unless $params->{country};
 
-	my $country = uc $params->{'country'};
+	$params = Object::Configure::configure($class, $params);
+
+	my $country = uc($params->{'country'});
 	my $module = $COUNTRY_MODULE{$country} or croak "Unsupported country: $country";
 
 	# Load the appropriate parser module dynamically
 	use_module($module);
 
 	return bless {
+		%{$params},
 		country => $country,
-		module => $module,
+		module => $module
 	}, $class;
 }
 
