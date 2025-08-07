@@ -5,6 +5,36 @@ use warnings;
 use Exporter 'import';
 our @EXPORT_OK = qw(parse_address);
 
+=head1 NAME
+
+Geo::Address::Parser::Rules::US - Parsing rules for US addresses
+
+=head1 DESCRIPTION
+
+Extracts name, street, city, state, and ZIP code from a flat US address string.
+
+=head1 EXPORTS
+
+=head2 parse_address($text)
+
+Returns a hashref with keys:
+
+=over
+
+=item * name
+
+=item * street
+
+=item * city
+
+=item * region
+
+=item * zip
+
+=back
+
+=cut
+
 sub parse_address {
     my ($class, $text) = @_;
     return unless defined $text;
@@ -37,33 +67,3 @@ sub parse_address {
 1;
 
 __END__
-
-=head1 NAME
-
-Geo::Address::Parser::Rules::US - Parsing rules for US addresses
-
-=head1 DESCRIPTION
-
-Extracts name, street, city, state, and ZIP code from a flat US address string.
-
-=head1 EXPORTS
-
-=head2 parse_address($text)
-
-Returns a hashref with keys:
-
-=over
-
-=item * name
-
-=item * street
-
-=item * city
-
-=item * region
-
-=item * zip
-
-=back
-
-=cut
