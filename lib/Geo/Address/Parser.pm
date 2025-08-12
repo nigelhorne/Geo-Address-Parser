@@ -31,7 +31,9 @@ my %COUNTRY_MODULE = (
 	UK => 'Geo::Address::Parser::Rules::UK',
 	CA => 'Geo::Address::Parser::Rules::CA',
 	AU => 'Geo::Address::Parser::Rules::AU',
+	'AUSTRALIA' => 'Geo::Address::Parser::Rules::AU',
 	NZ => 'Geo::Address::Parser::Rules::NZ',
+	'NEW ZEALAND' => 'Geo::Address::Parser::Rules::NZ',
 );
 
 =head1 METHODS
