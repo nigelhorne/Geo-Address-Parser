@@ -28,8 +28,10 @@ our $VERSION = '0.03';
 # Supported countries and their corresponding rule modules
 my %COUNTRY_MODULE = (
 	US => 'Geo::Address::Parser::Rules::US',
+	USA => 'Geo::Address::Parser::Rules::US',
 	UK => 'Geo::Address::Parser::Rules::UK',
 	CA => 'Geo::Address::Parser::Rules::CA',
+	'Canada' => 'Geo::Address::Parser::Rules::CA',
 	AU => 'Geo::Address::Parser::Rules::AU',
 	'AUSTRALIA' => 'Geo::Address::Parser::Rules::AU',
 	NZ => 'Geo::Address::Parser::Rules::NZ',
@@ -79,12 +81,23 @@ sub new {
 
 	my $params = Params::Get::get_params('country', \@_);
 
-	croak "Missing required 'country' parameter" unless $params->{country};
+	if(!defined($params->{country})) {
+		if($params->{'logger'}) {
+			$params->{'logger'}->warn("Missing required 'country' parameter");
+		}
+		croak("Missing required 'country' parameter");
+	}
 
 	$params = Object::Configure::configure($class, $params);
 
 	my $country = uc($params->{'country'});
-	my $module = $COUNTRY_MODULE{$country} or croak "Unsupported country: $country";
+	my $module = $COUNTRY_MODULE{$country};
+	if(!defined($module)) {
+		if($params->{'logger'}) {
+			$params->{'logger'}->warn("Unsupported country: $country");
+		}
+		croak("Unsupported country: $country");
+	}
 
 	# Load the appropriate parser module dynamically
 	use_module($module);
