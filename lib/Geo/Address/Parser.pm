@@ -33,6 +33,9 @@ my %COUNTRY_MODULE = (
 	'Canada' => 'Geo::Address::Parser::Rules::CA',
 	AU => 'Geo::Address::Parser::Rules::AU',
 	'AUSTRALIA' => 'Geo::Address::Parser::Rules::AU',
+	IE => 'Geo::Address::Parser::Rules::IRL',     # Ireland ISO code
+	IRL => 'Geo::Address::Parser::Rules::IRL',    # 3-letter code
+	'IRELAND' => 'Geo::Address::Parser::Rules::IRL', # Full name
 	NZ => 'Geo::Address::Parser::Rules::NZ',
 	'NEW ZEALAND' => 'Geo::Address::Parser::Rules::NZ',
 );
