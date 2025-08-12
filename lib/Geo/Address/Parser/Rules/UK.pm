@@ -2,8 +2,37 @@ package Geo::Address::Parser::Rules::UK;
 
 use strict;
 use warnings;
+
 use Exporter 'import';
 our @EXPORT_OK = qw(parse_address);
+
+=head1 NAME
+
+Geo::Address::Parser::Rules::UK - Parsing rules for UK addresses
+
+=head1 DESCRIPTION
+
+Parses a flat UK address string into components: name, street, city, and postcode.
+
+=head1 EXPORTS
+
+=head2 parse_address($text)
+
+Returns a hashref with keys:
+
+=over
+
+=item * name
+
+=item * street
+
+=item * city
+
+=item * postcode
+
+=back
+
+=cut
 
 # UK postcode pattern: e.g. SW1A 1AA
 my $postcode_re = qr/\b([A-Z]{1,2}\d{1,2}[A-Z]?)\s*(\d[A-Z]{2})\b/i;
@@ -37,31 +66,3 @@ sub parse_address {
 1;
 
 __END__
-
-=head1 NAME
-
-Geo::Address::Parser::Rules::UK - Parsing rules for UK addresses
-
-=head1 DESCRIPTION
-
-Parses a flat UK address string into components: name, street, city, and postcode.
-
-=head1 EXPORTS
-
-=head2 parse_address($text)
-
-Returns a hashref with keys:
-
-=over
-
-=item * name
-
-=item * street
-
-=item * city
-
-=item * postcode
-
-=back
-
-=cut
