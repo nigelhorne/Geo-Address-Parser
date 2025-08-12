@@ -28,6 +28,7 @@ my %COUNTRY_MODULE = (
 	US => 'Geo::Address::Parser::Rules::US',
 	USA => 'Geo::Address::Parser::Rules::US',
 	UK => 'Geo::Address::Parser::Rules::UK',
+	GB => 'Geo::Address::Parser::Rules::UK',
 	CA => 'Geo::Address::Parser::Rules::CA',
 	'Canada' => 'Geo::Address::Parser::Rules::CA',
 	AU => 'Geo::Address::Parser::Rules::AU',
