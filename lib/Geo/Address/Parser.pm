@@ -11,19 +11,17 @@ use Params::Get 0.13;
 use Return::Set;
 use Text::Capitalize 'capitalize_title';
 
-=encoding utf-8
-
 =head1 NAME
 
 Geo::Address::Parser - Lightweight country-aware address parser from flat text
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 # Supported countries and their corresponding rule modules
 my %COUNTRY_MODULE = (
@@ -47,6 +45,8 @@ my %COUNTRY_MODULE = (
     my $parser = Geo::Address::Parser->new(country => 'US');
 
     my $result = $parser->parse("Mastick Senior Center, 1525 Bay St, Alameda, CA");
+
+=encoding utf-8
 
 =head1 DESCRIPTION
 

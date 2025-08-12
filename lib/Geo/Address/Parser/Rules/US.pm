@@ -36,32 +36,33 @@ Returns a hashref with keys:
 =cut
 
 sub parse_address {
-    my ($class, $text) = @_;
-    return unless defined $text;
+	my ($class, $text) = @_;
 
-    # Split by commas and trim whitespace
-    my @parts = map { s/^\s+|\s+$//gr } split /,/, $text;
+	return unless defined $text;
 
-    my ($name, $street, $city, $region, $zip);
+	# Split by commas and trim whitespace
+	my @parts = map { s/^\s+|\s+$//gr } split /,/, $text;
 
-    # Try to extract region + ZIP code from last part
-    if ($parts[-1] =~ /^([A-Z]{2})\s*(\d{5}(?:-\d{4})?)?$/) {
-        $region = $1;
-        $zip    = $2 // '';
-        pop @parts;
-    }
+	my ($name, $street, $city, $region, $zip);
 
-    $city   = pop @parts if @parts;
-    $street = pop @parts if @parts;
-    $name   = join(', ', @parts) if @parts;
+	# Try to extract region + ZIP code from last part
+	if ($parts[-1] =~ /^([A-Z]{2})\s*(\d{5}(?:-\d{4})?)?$/) {
+		$region = $1;
+		$zip = $2 // '';
+		pop @parts;
+	}
 
-    return {
-        name    => $name,
-        street  => $street,
-        city    => $city,
-        region  => $region,
-        zip     => $zip,
-    };
+	$city = pop @parts if @parts;
+	$street = pop @parts if @parts;
+	$name = join(', ', @parts) if @parts;
+
+	return {
+		name => $name,
+		street => $street,
+		city => $city,
+		region => $region,
+		zip	 => $zip,
+	};
 }
 
 1;
