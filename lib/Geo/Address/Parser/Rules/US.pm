@@ -27,7 +27,7 @@ Returns a hashref with keys:
 
 =item * city
 
-=item * region
+=item * state
 
 =item * zip
 
@@ -43,11 +43,11 @@ sub parse_address {
 	# Split by commas and trim whitespace
 	my @parts = map { s/^\s+|\s+$//gr } split /,/, $text;
 
-	my ($name, $street, $city, $region, $zip);
+	my ($name, $street, $city, $state, $zip);
 
-	# Try to extract region + ZIP code from last part
+	# Try to extract state + ZIP code from last part
 	if ($parts[-1] =~ /^([A-Z]{2})\s*(\d{5}(?:-\d{4})?)?$/) {
-		$region = $1;
+		$state = $1;
 		$zip = $2 // '';
 		pop @parts;
 	}
@@ -60,7 +60,7 @@ sub parse_address {
 		name => $name,
 		street => $street,
 		city => $city,
-		region => $region,
+		state => $state,
 		zip	 => $zip,
 	};
 }

@@ -5,6 +5,7 @@ Revision history for Geo-Address-Parser
 	Refactored the UK rules
 	Added Geo::Address::Parser::Rules::IRL for Irish addresses
 	Call logger->error if logger is given
+	US rule now says state not region
 
 0.04	Tue Aug 12 08:16:22 EDT 2025
 	Use Return::Set, Test::Returns and Object::Configure

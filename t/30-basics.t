@@ -11,7 +11,7 @@ my $result = $parser->parse('Mastick Senior Center, 1525 Bay St, Alameda, CA 945
 is $result->{name},   'Mastick Senior Center', 'Name parsed';
 is $result->{street}, '1525 Bay St',           'Street parsed';
 is $result->{city},   'Alameda',               'City parsed';
-is $result->{region}, 'CA',                    'Region parsed';
+is($result->{state}, 'CA', 'State parsed');
 is $result->{zip},    '94501',                 'ZIP parsed';
 is $result->{country}, 'US',                   'Country preserved';
 
