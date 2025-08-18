@@ -3,6 +3,14 @@ package Geo::Address::Parser::Rules::NZ;
 use strict;
 use warnings;
 
+=head1 VERSION
+
+Version 0.06
+
+=cut
+
+our $VERSION = '0.06';
+
 use Exporter 'import';
 our @EXPORT_OK = qw(parse_address);
 
