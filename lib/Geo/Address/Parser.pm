@@ -180,15 +180,19 @@ sub parse
 	$text =~ s/\s$//g;
 	$text =~ s/\s,/,/g;
 
-	my $result = $parser->parse_address($text);
+	if(my $result = $parser->parse_address($text)) {
+		# FIXME: The code addeth and the code taketh away.  It shouldn't addeth in the first place
+		for my $key (keys %{$result}) {
+			delete $result->{$key} unless defined $result->{$key};
+		}
+		# Add country field to result if not already present
+		$result->{country} //= $self->{country} if $result;
 
-	# Add country field to result if not already present
-	$result->{country} //= $self->{country} if $result;
+		$result->{'name'} = capitalize_title($result->{'name'}) if($result->{'name'});
 
-	$result->{'name'} = capitalize_title($result->{'name'}) if($result->{'name'});
-
-	# Returns a hashref with at least two items: name and country
-	return Return::Set::set_return($result, { 'type' => 'hashref', 'min' => 2 });
+		# Returns a hashref with at least two items: name and country
+		return Return::Set::set_return($result, { 'type' => 'hashref', 'min' => 2 });
+	}
 }
 
 =head1 SUPPORT
