@@ -95,13 +95,6 @@ sub new {
 		}
 	});
 
-	if(!defined($params->{country})) {
-		if($params->{'logger'}) {
-			$params->{'logger'}->warn("Missing required 'country' parameter");
-		}
-		croak("Missing required 'country' parameter");
-	}
-
 	$params = Object::Configure::configure($class, $params);
 
 	my $country = uc($params->{'country'});
