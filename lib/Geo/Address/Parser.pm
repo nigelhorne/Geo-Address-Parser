@@ -8,6 +8,7 @@ use Carp;
 use Module::Runtime qw(use_module);
 use Object::Configure;
 use Params::Get 0.13;
+use Params::Validate::Strict qw(validate_strict);
 use Return::Set;
 use Text::Capitalize 'capitalize_title';
 
@@ -30,7 +31,7 @@ my %COUNTRY_MODULE = (
 	UK => 'Geo::Address::Parser::Rules::UK',
 	GB => 'Geo::Address::Parser::Rules::UK',
 	CA => 'Geo::Address::Parser::Rules::CA',
-	'Canada' => 'Geo::Address::Parser::Rules::CA',
+	'CANADA' => 'Geo::Address::Parser::Rules::CA',
 	AU => 'Geo::Address::Parser::Rules::AU',
 	'AUSTRALIA' => 'Geo::Address::Parser::Rules::AU',
 	IE => 'Geo::Address::Parser::Rules::IRL',     # Ireland ISO code
@@ -87,7 +88,12 @@ Creates a new parser for a specific country (US, UK, CA, AU, NZ).
 sub new {
 	my $class = shift;
 
-	my $params = Params::Get::get_params('country', \@_);
+	my $params = Params::Validate::Strict::validate_strict({
+		args => Params::Get::get_params('country', \@_),
+		schema => {
+			'country' => { 'type' => 'string', 'min' => 2 }
+		}
+	});
 
 	if(!defined($params->{country})) {
 		if($params->{'logger'}) {

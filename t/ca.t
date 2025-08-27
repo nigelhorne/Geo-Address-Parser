@@ -3,7 +3,7 @@ use warnings;
 use Test::More;
 use Geo::Address::Parser;
 
-my $parser = Geo::Address::Parser->new(country => 'CA');
+my $parser = Geo::Address::Parser->new(country => 'CANADA');
 my $result = $parser->parse('Dr. Peter Smith, 123 Bloor St W, Toronto, ON M5S 1N5');
 
 is $result->{name},     'Dr. Peter Smith',     'Name parsed';
