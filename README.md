@@ -58,9 +58,9 @@ Creates a new parser for a specific country (US, UK, CA, AU, NZ).
 
 #### OUTPUT
 
-Error: log (if set); croak
-Can't parse: undef
-Otherwise: Geo::Address::Parser object
+- Error: log (if set); croak
+- Can't parse: undef
+- Otherwise: Geo::Address::Parser object
 
 ## parse($text)
 
@@ -82,12 +82,13 @@ Parses a flat string and returns a hashref with the following fields:
 
 #### OUTPUT
 
-Error: log (if set); croak
-Can't parse: undef
+- Error: log (if set); croak
+- Can't parse: undef
+- Otherwise:
 
-    {
-      'type' => 'hashref', 'min' => 2
-    }
+        {
+          'type' => 'hashref', 'min' => 2
+        }
 
 ### FORMAL SPECIFICATION
 

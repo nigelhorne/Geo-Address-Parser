@@ -95,9 +95,15 @@ Creates a new parser for a specific country (US, UK, CA, AU, NZ).
 
 =head4 OUTPUT
 
-Error: log (if set); croak
-Can't parse: undef
-Otherwise: Geo::Address::Parser object
+=over 4
+
+=item * Error: log (if set); croak
+
+=item * Can't parse: undef
+
+=item * Otherwise: Geo::Address::Parser object
+
+=back
 
 =cut
 
@@ -160,12 +166,19 @@ Parses a flat string and returns a hashref with the following fields:
 
 =head4 OUTPUT
 
-Error: log (if set); croak
-Can't parse: undef
+=over 4
+
+=item * Error: log (if set); croak
+
+=item * Can't parse: undef
+
+=item * Otherwise:
 
   {
     'type' => 'hashref', 'min' => 2
   }
+
+=back
 
 =head3 FORMAL SPECIFICATION
 
