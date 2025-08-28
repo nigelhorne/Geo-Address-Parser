@@ -4,7 +4,7 @@ Geo::Address::Parser - Lightweight country-aware address parser from flat text
 
 # VERSION
 
-Version 0.05
+Version 0.06
 
 # METHODS
 
@@ -46,6 +46,22 @@ Creates a new parser for a specific country (US, UK, CA, AU, NZ).
     country? ∈ supported
     parser! = parserFor(country?)
 
+### API SPECIFICATION
+
+#### INPUT
+
+    {
+      'country' => {
+        'type' => 'string', 'min' => 2, 'matches' => qr/^[A-Za-z\s]+$/
+      }
+    }
+
+#### OUTPUT
+
+Error: log (if set); croak
+Can't parse: undef
+Otherwise: Geo::Address::Parser object
+
 ## parse($text)
 
 Parses a flat string and returns a hashref with the following fields:
@@ -55,6 +71,23 @@ Parses a flat string and returns a hashref with the following fields:
 - city
 - region
 - country
+
+### API SPECIFICATION
+
+#### INPUT
+
+    {
+      'text' => { 'type' => 'string', 'min' => 2
+    }
+
+#### OUTPUT
+
+Error: log (if set); croak
+Can't parse: undef
+
+    {
+      'type' => 'hashref', 'min' => 2
+    }
 
 ### FORMAL SPECIFICATION
 

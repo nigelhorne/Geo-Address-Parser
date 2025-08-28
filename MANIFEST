@@ -16,6 +16,7 @@ t/30-basics.t
 t/au.t
 t/ca.t
 t/cli.t
+t/comment-spelling.t
 t/eof.t
 t/eol.t
 t/irl.t

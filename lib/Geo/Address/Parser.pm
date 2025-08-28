@@ -83,6 +83,22 @@ Creates a new parser for a specific country (US, UK, CA, AU, NZ).
     country? ∈ supported
     parser! = parserFor(country?)
 
+=head3 API SPECIFICATION
+
+=head4 INPUT
+
+  {
+    'country' => {
+      'type' => 'string', 'min' => 2, 'matches' => qr/^[A-Za-z\s]+$/
+    }
+  }
+
+=head4 OUTPUT
+
+Error: log (if set); croak
+Can't parse: undef
+Otherwise: Geo::Address::Parser object
+
 =cut
 
 sub new {
@@ -91,7 +107,7 @@ sub new {
 	my $params = Params::Validate::Strict::validate_strict({
 		args => Params::Get::get_params('country', \@_),
 		schema => {
-			'country' => { 'type' => 'string', 'min' => 2 }
+			'country' => { 'type' => 'string', 'min' => 2, 'matches' => qr/^[A-Za-z\s]+$/ }
 		}
 	});
 
@@ -134,6 +150,23 @@ Parses a flat string and returns a hashref with the following fields:
 
 =back
 
+=head3 API SPECIFICATION
+
+=head4 INPUT
+
+  {
+    'text' => { 'type' => 'string', 'min' => 2
+  }
+
+=head4 OUTPUT
+
+Error: log (if set); croak
+Can't parse: undef
+
+  {
+    'type' => 'hashref', 'min' => 2
+  }
+
 =head3 FORMAL SPECIFICATION
 
     [TEXT, COUNTRY, FIELD, VALUE]
@@ -160,16 +193,14 @@ sub parse
 {
 	my $self = shift;
 
-	my $params = Params::Get::get_params('text', \@_);
+        my $params = Params::Validate::Strict::validate_strict({
+		args => Params::Get::get_params('text', \@_),
+		schema => {
+			'text' => { 'type' => 'string', 'min' => 2 }
+		}
+	});
 
 	my $text = $params->{'text'};
-
-	if(!defined($text)) {
-		if($self->{'logger'}) {
-			$self->{'logger'}->error(ref($self) . ':parse(): No input text provided');
-		}
-		croak('No input text provided');
-	}
 
 	my $parser = $self->{module};
 
