@@ -6,10 +6,10 @@ use warnings;
 
 use Carp;
 use Module::Runtime qw(use_module);
-use Object::Configure;
+use Object::Configure 0.16;
 use Params::Get 0.13;
 use Params::Validate::Strict qw(validate_strict);
-use Return::Set;
+use Return::Set 0.02;
 use Text::Capitalize 'capitalize_title';
 
 =head1 NAME
