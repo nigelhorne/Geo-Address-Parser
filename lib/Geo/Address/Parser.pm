@@ -214,6 +214,9 @@ sub parse
 	});
 
 	my $text = $params->{'text'};
+	if(!defined($text)) {
+		croak(__PACKAGE__, '::parse: Usage($text => string)');
+	}
 
 	my $parser = $self->{module};
 
