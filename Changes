@@ -4,6 +4,7 @@ Revision history for Geo-Address-Parser
 	parse(): Don't put undefs in the output hash
 	Addresses in Canada could say "Unsupported country"
 	Formally specify the API
+	Added fuzz testing
 
 0.06	Mon Aug 18 11:36:54 EDT 2025
 	US rule now says state not region

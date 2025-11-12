@@ -1,0 +1,15 @@
+---
+module: Geo::Address::Parser
+function: parse
+
+new:
+  country: CANADA
+
+input:
+  text:
+    type: string
+    min: 2
+
+output:
+  type: hashref
+  min: 2
