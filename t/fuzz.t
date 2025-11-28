@@ -3,11 +3,14 @@
 use strict;
 use warnings;
 
+use Test::Needs {
+	'App::Test::Generator' => '0.19'
+};
+use Test::Which 'fuzz-harness-generator';
 use FindBin qw($Bin);
 use IPC::Run3;
 use IPC::System::Simple qw(system);
 use Test::Most;
-use Test::Needs 'App::Test::Generator';
 
 my $dirname = "$Bin/conf";
 
