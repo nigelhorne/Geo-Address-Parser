@@ -33,6 +33,7 @@ WriteMakefile(
 	}, TEST_REQUIRES => {
 		'Getopt::Long' => 0,
 		'IPC::Open3' => 0,
+		'IPC::Run3' => 0,
 		'JSON::MaybeXS' => 0,
 		'Pod::Usage' => 0,
 		'Symbol' => 0,

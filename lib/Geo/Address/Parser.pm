@@ -65,7 +65,7 @@ setting C<$ENV{'GEO__ADDRESS__PARSER__carp_on_warn'}> causes warnings to use L<C
 For more information about runtime configuration,
 see L<Object::Configure>.
 
-=head2 new(country => $code)
+=head2 new(country)
 
 Creates a new parser for a specific country (US, UK, CA, AU, NZ).
 
@@ -138,9 +138,9 @@ sub new {
 	}, $class;
 }
 
-=head2 parse($text)
+=head2 parse
 
-Parses a flat string and returns a hashref with the following fields:
+Takes a string and returns a hashref with the following fields:
 
 =over
 
