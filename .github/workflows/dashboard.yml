@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        perl: ["5.40"]
+        perl: ["5.42"]
     steps:
       # Checkout repository
       - uses: actions/checkout@v6
@@ -41,7 +41,8 @@ jobs:
       - name: Install dependencies
         run: |
           cpanm --notest --installdeps .
-          cpanm -iqn ExtUtils::MakeMaker Test::Most Devel::Cover Devel::Cover::Report::Html POSIX File::Glob File::Slurp File::stat Readonly IPC::System::Simple
+          cpanm -iqn ExtUtils::MakeMaker Test::Most Devel::Cover Devel::Cover::Report::Html POSIX File::Glob File::Slurp File::stat Readonly
+          cpanm -iqn IPC::Run3 IPC::System::Simple
 
       # Optional: run Perl::Critic static checks
       # - name: Run Perl::Critic
