@@ -213,6 +213,9 @@ sub parse
 		}
 	});
 
+	if(!defined($params)) {
+		croak(__PACKAGE__, '::parse: Usage($text => string)');
+	}
 	my $text = $params->{'text'};
 	if(!defined($text)) {
 		croak(__PACKAGE__, '::parse: Usage($text => string)');
@@ -255,13 +258,15 @@ automatically be notified of progress on your bug as I make changes.
 
 =over 4
 
+=item * L<Test Coverage Report|https://nigelhorne.github.io/Geo-Address-Parser/coverage/>
+
 =item * L<Object::Configure>
 
 =back
 
 =head1 LICENCE AND COPYRIGHT
 
-Copyright 2025 Nigel Horne.
+Copyright 2025-2026 Nigel Horne.
 
 Usage is subject to licence terms.
 

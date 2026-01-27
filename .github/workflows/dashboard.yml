@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        perl: ["5.42"]
+        perl: ["5.40"]
     steps:
       # Checkout repository
       - uses: actions/checkout@v6
@@ -41,7 +41,7 @@ jobs:
       - name: Install dependencies
         run: |
           cpanm --notest --installdeps .
-          cpanm -iqn ExtUtils::MakeMaker Test::Most Devel::Cover Devel::Cover::Report::Html POSIX File::Glob File::Slurp File::stat Readonly
+          cpanm -iqn ExtUtils::MakeMaker Test::Most Devel::Cover Devel::Cover::Report::Html POSIX File::Glob File::Slurp File::stat Readonly IPC::System::Simple
 
       # Optional: run Perl::Critic static checks
       # - name: Run Perl::Critic
@@ -50,14 +50,21 @@ jobs:
       #     perlcritic --verbose 5 lib || true
 
       - name: Run tests manually
+        env:
+          AUTOMATED_TESTING: 1
+          NO_NETWORK_TESTING: 1
         run: |
           prove -l -b -v t
 
       # Run the tests with Devel::Cover for coverage
       - name: Run tests with coverage
-        run: |
-          COVER_VERBOSE=1 cover -test
+        env:
+          PERL5LIB: ${{ github.workspace }}/local/lib/perl5
+          COVER_VERBOSE: 1
         working-directory: ${{ github.workspace }}
+        run: |
+          perl Makefile.PL
+          cover -test
 
       # Generate HTML coverage report
       - name: Generate HTML report

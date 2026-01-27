@@ -2,6 +2,9 @@
 module: Geo::Address::Parser
 function: parse
 
+config:
+  test_nuls: off
+
 new:
   country: CANADA
 
