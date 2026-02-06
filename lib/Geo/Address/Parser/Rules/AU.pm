@@ -5,6 +5,8 @@ use warnings;
 use Exporter 'import';
 our @EXPORT_OK = qw(parse_address);
 
+our $VERSION = '0.07';
+
 # Australian states and territories (2–3 letter abbreviations)
 my $state_re = qr/\b(ACT|NSW|NT|QLD|SA|TAS|VIC|WA)\b/i;
 

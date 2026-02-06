@@ -18,11 +18,11 @@ Geo::Address::Parser - Lightweight country-aware address parser from flat text
 
 =head1 VERSION
 
-Version 0.06
+Version 0.07
 
 =cut
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 # Supported countries and their corresponding rule modules
 my %COUNTRY_MODULE = (

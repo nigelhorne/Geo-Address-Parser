@@ -5,6 +5,8 @@ use warnings;
 use Exporter 'import';
 our @EXPORT_OK = qw(parse_address);
 
+our $VERSION = '0.07';
+
 # Canadian postal code: A1A 1A1 (letters/digits with a space)
 my $postal_re = qr/\b([A-Z]\d[A-Z])\s*(\d[A-Z]\d)\b/i;
 

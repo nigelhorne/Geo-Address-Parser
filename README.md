@@ -4,7 +4,7 @@ Geo::Address::Parser - Lightweight country-aware address parser from flat text
 
 # VERSION
 
-Version 0.06
+Version 0.07
 
 # METHODS
 
@@ -67,7 +67,7 @@ Creates a new parser for a specific country (US, UK, CA, AU, NZ).
 Takes a string and returns a hashref with the following fields:
 
 - name
-- street
+- road
 - city
 - region
 - country

@@ -5,6 +5,8 @@ use warnings;
 use Exporter 'import';
 our @EXPORT_OK = qw(parse_address);
 
+our $VERSION = '0.07';
+
 =head1 NAME
 
 Geo::Address::Parser::Rules::US - Parsing rules for US addresses
