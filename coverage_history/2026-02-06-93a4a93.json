@@ -1,0 +1,607 @@
+{
+   "runs" : [
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387364.65103,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "-e",
+         "start" : 1770387364.65073,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387364.80894,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "-e",
+         "start" : 1770387364.80876,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387364.96818,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "-e",
+         "start" : 1770387364.96788,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387365.12598,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "-e",
+         "start" : 1770387365.12564,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387365.29064,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "-e",
+         "start" : 1770387365.29038,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387365.45151,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "-e",
+         "start" : 1770387365.45132,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387365.61117,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "-e",
+         "start" : 1770387365.61098,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387365.76938,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "-e",
+         "start" : 1770387365.76921,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387365.94622,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "-e",
+         "start" : 1770387365.93611,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387366.16461,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "-e",
+         "start" : 1770387366.16422,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387371.25322,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "-e",
+         "start" : 1770387366.35054,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387366.48614,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "-e",
+         "start" : 1770387366.48605,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387366.82823,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/30-basics.t",
+         "start" : 1770387366.79982,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387367.1849,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/au.t",
+         "start" : 1770387367.16116,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387367.53961,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/ca.t",
+         "start" : 1770387367.51537,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387368.15641,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/cli.t",
+         "start" : 1770387367.82523,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387368.0798,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "bin/geo-parse",
+         "start" : 1770387368.05767,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387368.39032,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/comment-spelling.t",
+         "start" : 1770387368.39014,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387368.60652,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/eof.t",
+         "start" : 1770387368.60634,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387368.82231,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/eol.t",
+         "start" : 1770387368.82212,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387368.99609,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/fuzz.t",
+         "start" : 1770387368.99606,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387369.22914,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/irl.t",
+         "start" : 1770387369.21337,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387369.56358,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/nz.t",
+         "start" : 1770387369.53919,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387369.82217,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/pod-cm.t",
+         "start" : 1770387369.82198,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387370.03886,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/pod-coverage.t",
+         "start" : 1770387370.03866,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387370.25596,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/pod-synopsis.t",
+         "start" : 1770387370.25578,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387370.47406,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/pod.t",
+         "start" : 1770387370.47388,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387370.81038,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/uk.t",
+         "start" : 1770387370.7813,
+         "version" : "0.06"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Lightweight country-aware address parser from flat text",
+         "dir" : "/home/runner/work/Geo-Address-Parser/Geo-Address-Parser",
+         "finish" : 1770387371.17175,
+         "name" : "Geo-Address-Parser",
+         "perl" : "5.42.0",
+         "run" : "t/us.t",
+         "start" : 1770387371.14753,
+         "version" : "0.06"
+      }
+   ],
+   "summary" : {
+      "Total" : {
+         "branch" : {
+            "covered" : 67,
+            "error" : 49,
+            "percentage" : 57.7586206896552,
+            "total" : 116,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 17,
+            "error" : 10,
+            "percentage" : 62.962962962963,
+            "total" : 27,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 255,
+            "error" : 22,
+            "percentage" : 92.057761732852,
+            "total" : 277
+         },
+         "subroutine" : {
+            "covered" : 43,
+            "percentage" : 100,
+            "total" : 43
+         },
+         "total" : {
+            "covered" : 382,
+            "error" : 81,
+            "percentage" : 82.5053995680346,
+            "total" : 463,
+            "uncoverable" : 0
+         }
+      },
+      "bin/geo-parse" : {
+         "branch" : {
+            "covered" : 7,
+            "error" : 7,
+            "percentage" : 50,
+            "total" : 14,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 0,
+            "error" : 2,
+            "percentage" : 0,
+            "total" : 2,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 32,
+            "error" : 8,
+            "percentage" : 80,
+            "total" : 40
+         },
+         "subroutine" : {
+            "covered" : 6,
+            "percentage" : 100,
+            "total" : 6
+         },
+         "total" : {
+            "covered" : 45,
+            "error" : 17,
+            "percentage" : 72.5806451612903,
+            "total" : 62,
+            "uncoverable" : 0
+         }
+      },
+      "blib/lib/Geo/Address/Parser.pm" : {
+         "branch" : {
+            "covered" : 10,
+            "error" : 6,
+            "percentage" : 62.5,
+            "total" : 16,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 2,
+            "error" : 1,
+            "percentage" : 66.6666666666667,
+            "total" : 3,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 58,
+            "error" : 2,
+            "percentage" : 96.6666666666667,
+            "total" : 60
+         },
+         "subroutine" : {
+            "covered" : 12,
+            "percentage" : 100,
+            "total" : 12
+         },
+         "total" : {
+            "covered" : 82,
+            "error" : 9,
+            "percentage" : 90.1098901098901,
+            "total" : 91,
+            "uncoverable" : 0
+         }
+      },
+      "blib/lib/Geo/Address/Parser/Rules/AU.pm" : {
+         "branch" : {
+            "covered" : 5,
+            "error" : 7,
+            "percentage" : 41.6666666666667,
+            "total" : 12,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 22,
+            "error" : 2,
+            "percentage" : 91.6666666666667,
+            "total" : 24
+         },
+         "subroutine" : {
+            "covered" : 4,
+            "percentage" : 100,
+            "total" : 4
+         },
+         "total" : {
+            "covered" : 31,
+            "error" : 9,
+            "percentage" : 77.5,
+            "total" : 40,
+            "uncoverable" : 0
+         }
+      },
+      "blib/lib/Geo/Address/Parser/Rules/CA.pm" : {
+         "branch" : {
+            "covered" : 5,
+            "error" : 7,
+            "percentage" : 41.6666666666667,
+            "total" : 12,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 22,
+            "error" : 2,
+            "percentage" : 91.6666666666667,
+            "total" : 24
+         },
+         "subroutine" : {
+            "covered" : 4,
+            "percentage" : 100,
+            "total" : 4
+         },
+         "total" : {
+            "covered" : 31,
+            "error" : 9,
+            "percentage" : 77.5,
+            "total" : 40,
+            "uncoverable" : 0
+         }
+      },
+      "blib/lib/Geo/Address/Parser/Rules/IRL.pm" : {
+         "branch" : {
+            "covered" : 17,
+            "error" : 7,
+            "percentage" : 70.8333333333333,
+            "total" : 24,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 6,
+            "error" : 3,
+            "percentage" : 66.6666666666667,
+            "total" : 9,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 46,
+            "error" : 8,
+            "percentage" : 85.1851851851852,
+            "total" : 54
+         },
+         "subroutine" : {
+            "covered" : 5,
+            "percentage" : 100,
+            "total" : 5
+         },
+         "total" : {
+            "covered" : 74,
+            "error" : 18,
+            "percentage" : 80.4347826086957,
+            "total" : 92,
+            "uncoverable" : 0
+         }
+      },
+      "blib/lib/Geo/Address/Parser/Rules/NZ.pm" : {
+         "branch" : {
+            "covered" : 6,
+            "error" : 6,
+            "percentage" : 50,
+            "total" : 12,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 22,
+            "percentage" : 100,
+            "total" : 22
+         },
+         "subroutine" : {
+            "covered" : 4,
+            "percentage" : 100,
+            "total" : 4
+         },
+         "total" : {
+            "covered" : 32,
+            "error" : 6,
+            "percentage" : 84.2105263157895,
+            "total" : 38,
+            "uncoverable" : 0
+         }
+      },
+      "blib/lib/Geo/Address/Parser/Rules/UK.pm" : {
+         "branch" : {
+            "covered" : 12,
+            "error" : 4,
+            "percentage" : 75,
+            "total" : 16,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 8,
+            "error" : 3,
+            "percentage" : 72.7272727272727,
+            "total" : 11,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 31,
+            "percentage" : 100,
+            "total" : 31
+         },
+         "subroutine" : {
+            "covered" : 4,
+            "percentage" : 100,
+            "total" : 4
+         },
+         "total" : {
+            "covered" : 55,
+            "error" : 7,
+            "percentage" : 88.7096774193548,
+            "total" : 62,
+            "uncoverable" : 0
+         }
+      },
+      "blib/lib/Geo/Address/Parser/Rules/US.pm" : {
+         "branch" : {
+            "covered" : 5,
+            "error" : 5,
+            "percentage" : 50,
+            "total" : 10,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 1,
+            "error" : 1,
+            "percentage" : 50,
+            "total" : 2,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 22,
+            "percentage" : 100,
+            "total" : 22
+         },
+         "subroutine" : {
+            "covered" : 4,
+            "percentage" : 100,
+            "total" : 4
+         },
+         "total" : {
+            "covered" : 32,
+            "error" : 6,
+            "percentage" : 84.2105263157895,
+            "total" : 38,
+            "uncoverable" : 0
+         }
+      }
+   }
+}
