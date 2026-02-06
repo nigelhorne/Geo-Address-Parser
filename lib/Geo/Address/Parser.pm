@@ -146,7 +146,7 @@ Takes a string and returns a hashref with the following fields:
 
 =item * name
 
-=item * street
+=item * road
 
 =item * city
 

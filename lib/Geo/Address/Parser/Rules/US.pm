@@ -29,7 +29,11 @@ Returns a hashref with keys:
 
 =item * region
 
-=item * zip
+This contains the state.
+
+=item * postcode
+
+This contains the zip code.
 
 =back
 
@@ -61,7 +65,7 @@ sub parse_address {
 		street => $street,
 		city => $city,
 		region => $region,
-		zip => $zip,
+		postcode => $zip,
 	};
 }
 

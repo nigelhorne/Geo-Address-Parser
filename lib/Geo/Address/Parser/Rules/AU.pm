@@ -53,7 +53,7 @@ Geo::Address::Parser::Rules::AU - Parsing rules for Australian addresses
 
 =head1 DESCRIPTION
 
-Parses a flat Australian address string into components: name, road, suburb, state, postcode.
+Parses a flat Australian address string into components: name, road, suburb, region, postcode.
 
 =head1 EXPORTS
 
@@ -69,7 +69,9 @@ Returns a hashref with keys:
 
 =item * suburb
 
-=item * region (state)
+=item * region
+
+This contains the state
 
 =item * postcode
 
