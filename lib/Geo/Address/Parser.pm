@@ -206,7 +206,7 @@ sub parse
 {
 	my $self = shift;
 
-        my $params = Params::Validate::Strict::validate_strict({
+	my $params = Params::Validate::Strict::validate_strict({
 		args => Params::Get::get_params('text', \@_),
 		schema => {
 			'text' => { 'type' => 'string', 'min' => 2 }

@@ -1,4 +1,4 @@
-# Generated from Makefile.PL
+# Generated from Makefile.PL using makefilepl2cpanfile
 
 requires 'perl', '5.14.0';
 
@@ -16,6 +16,7 @@ on 'configure' => sub {
 on 'test' => sub {
 	requires 'Getopt::Long';
 	requires 'IPC::Open3';
+	requires 'IPC::Run3';
 	requires 'JSON::MaybeXS';
 	requires 'Pod::Usage';
 	requires 'Symbol';
