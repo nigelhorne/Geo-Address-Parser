@@ -28,7 +28,7 @@ setting `$ENV{'GEO__ADDRESS__PARSER__carp_on_warn'}` causes warnings to use [Car
 For more information about runtime configuration,
 see [Object::Configure](https://metacpan.org/pod/Object%3A%3AConfigure).
 
-## new(country => $code)
+## new(country)
 
 Creates a new parser for a specific country (US, UK, CA, AU, NZ).
 
@@ -62,9 +62,9 @@ Creates a new parser for a specific country (US, UK, CA, AU, NZ).
 - Can't parse: undef
 - Otherwise: Geo::Address::Parser object
 
-## parse($text)
+## parse
 
-Parses a flat string and returns a hashref with the following fields:
+Takes a string and returns a hashref with the following fields:
 
 - name
 - street
@@ -122,11 +122,12 @@ automatically be notified of progress on your bug as I make changes.
 
 # SEE ALSO
 
+- [Test Dashboard](https://nigelhorne.github.io/Geo-Address-Parser/coverage/)
 - [Object::Configure](https://metacpan.org/pod/Object%3A%3AConfigure)
 
 # LICENCE AND COPYRIGHT
 
-Copyright 2025 Nigel Horne.
+Copyright 2025-2026 Nigel Horne.
 
 Usage is subject to licence terms.
 

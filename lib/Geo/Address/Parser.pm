@@ -258,7 +258,7 @@ automatically be notified of progress on your bug as I make changes.
 
 =over 4
 
-=item * L<Test Coverage Report|https://nigelhorne.github.io/Geo-Address-Parser/coverage/>
+=item * L<Test Dashboard|https://nigelhorne.github.io/Geo-Address-Parser/coverage/>
 
 =item * L<Object::Configure>
 
