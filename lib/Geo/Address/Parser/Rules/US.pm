@@ -11,7 +11,7 @@ Geo::Address::Parser::Rules::US - Parsing rules for US addresses
 
 =head1 DESCRIPTION
 
-Extracts name, road, city, state, and ZIP code from a flat US address string.
+Extracts name, street, city, region, and ZIP code from a flat US address string.
 
 =head1 EXPORTS
 
@@ -23,11 +23,11 @@ Returns a hashref with keys:
 
 =item * name
 
-=item * road
+=item * street
 
 =item * city
 
-=item * state
+=item * region
 
 =item * zip
 
@@ -43,24 +43,24 @@ sub parse_address {
 	# Split by commas and trim whitespace
 	my @parts = map { s/^\s+|\s+$//gr } split /,/, $text;
 
-	my ($name, $road, $city, $state, $zip);
+	my ($name, $street, $city, $region, $zip);
 
-	# Try to extract state + ZIP code from last part
+	# Try to extract region + ZIP code from last part
 	if ($parts[-1] =~ /^([A-Z]{2})\s*(\d{5}(?:-\d{4})?)?$/) {
-		$state = $1;
+		$region = $1;
 		$zip = $2 // '';
 		pop @parts;
 	}
 
 	$city = pop @parts if @parts;
-	$road = pop @parts if @parts;
+	$street = pop @parts if @parts;
 	$name = join(', ', @parts) if @parts;
 
 	return {
 		name => $name,
-		road => $road,
+		street => $street,
 		city => $city,
-		state => $state,
+		region => $region,
 		zip => $zip,
 	};
 }

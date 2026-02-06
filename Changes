@@ -6,6 +6,7 @@ Revision history for Geo-Address-Parser
 	Formally specify the API
 	Added fuzz testing
 	Added the test dashboard
+	Start to standarise the field names
 
 0.06	Mon Aug 18 11:36:54 EDT 2025
 	US rule now says state not region
