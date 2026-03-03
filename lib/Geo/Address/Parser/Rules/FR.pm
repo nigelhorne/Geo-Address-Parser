@@ -7,7 +7,7 @@ use Exporter 'import';
 use Params::Get;
 our @EXPORT_OK = qw(parse_address);
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 =head1 NAME
 
@@ -17,6 +17,30 @@ Geo::Address::Parser::Rules::FR - Parsing rules for French addresses
 
 Extracts name, street, city, and postcode from a flat French address string.
 French format typically follows: [Name], [Street], [Postcode] [City]
+
+=head1 EXPORTS
+
+=head2 parse_address($text)
+
+Returns a hashref with keys:
+
+=over
+
+=item * name
+
+=item * street
+
+=item * city
+
+=item * region
+
+This contains the state.
+
+=item * postcode
+
+This contains the zip code.
+
+=back
 
 =cut
 
