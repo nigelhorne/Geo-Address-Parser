@@ -11,8 +11,9 @@ requires 'Return::Set', '0.02';
 requires 'Text::Capitalize';
 
 on 'configure' => sub {
-	requires 'ExtUtils::MakeMaker', '6.64';
+	requires 'ExtUtils::MakeMaker', '6.64';   # Minimum version for TEST_REQUIRES
 };
+
 on 'test' => sub {
 	requires 'Getopt::Long';
 	requires 'IPC::Open3';
@@ -26,6 +27,7 @@ on 'test' => sub {
 	requires 'Test::Returns';
 	requires 'Test::Which';
 };
+
 on 'develop' => sub {
 	requires 'Devel::Cover';
 	requires 'Perl::Critic';
